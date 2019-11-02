@@ -53,11 +53,17 @@ body {
     font-family: 'Quicksand', sans-serif;
     color: #f5f6fa;
     padding: 60px;
+    cursor: default;
 }
 h1 {
-    font-size: 2rem;
+    font-size: 2em;
     text-align: center;
     color: #fbc531;
+}
+#weatherTable {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
 }
 #weatherTable > div {
     display: flex;
@@ -69,3 +75,98 @@ h1 {
     height: 30px;
     margin-top: 10px;
 }
+#weatherTable > div > div {
+    margin-top: 15px;
+    text-align: center;
+
+    background-color: rgba(255,255,255,0.1);
+    padding: 10px;
+    border-radius: 20px;
+}
+#weatherTable > div > div > span {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.9em;
+    color: gray;
+    font-weight: 700;
+}
+#weatherTable > div > div > div {
+    line-height: 1.4;
+    margin-top: 10px;
+
+    border-bottom: 1px solid grey;
+    padding-bottom: 15px;
+}
+#weatherTable > div > div > div:last-child {
+    border-bottom: none;
+}
+/*MOBILE RESPONSIVE*/
+@media only screen and (max-width: 1280px) {
+    body {
+        font-size: 0.9rem;
+        padding: 60px 20px;
+    }
+}
+@media only screen and (max-width: 1150px) {
+    body {
+        font-size: 0.8rem;
+    }
+}
+@media only screen and (max-width: 1050px) {
+    body {
+        font-size: 0.7rem;
+    }
+}
+@media only screen and (max-width: 950px) {
+    body {
+        font-size: 0.6rem;
+    }
+}
+@media only screen and (max-width: 850px) {
+    body {
+        font-size: 0.5rem;
+    }
+}
+@media only screen and (max-width: 823px) and (orientation: landscape) {
+    body {
+        font-size: 0.6rem;
+    }
+}
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    body {
+        font-size: 0.7rem;
+    }
+    #weatherTable {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    #weatherTable > div > div {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    #weatherTable > div > div > div {
+        border-bottom: none;
+        padding-bottom: 15px;
+    }
+}
+@media only screen and (max-width: 736px) and (orientation: landscape) {
+    body {
+        padding: 30px 0.5px;
+        font-size: 0.5rem;
+    }
+    #weatherTable {
+        margin-top: 30px;
+    }
+}
+@media only screen and (max-width: 568px) and (orientation: landscape) {
+    body {
+        font-size: 0.4rem;
+    }
+}
+@media only screen and (max-width: 320px) and (orientation: portrait) {
+    body {
+        font-size: 0.6rem;
+    }
+} 
